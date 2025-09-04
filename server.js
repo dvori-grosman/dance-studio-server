@@ -19,7 +19,11 @@ app.use(limiter);
 
 // CORS configuration
 app.use(cors({
-  origin: process.env.CORS_ORIGIN ? process.env.CORS_ORIGIN.split(',') : ['http://localhost:5173', 'http://localhost:5174'],
+  origin: process.env.CORS_ORIGIN ? process.env.CORS_ORIGIN.split(',') : [
+    'http://localhost:5173', 
+    'http://localhost:5174',
+    'https://rikud.netlify.app'
+  ],
   credentials: true
 }));
 
