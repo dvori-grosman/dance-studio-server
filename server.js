@@ -23,7 +23,8 @@ const allowedOrigins = [
   'http://localhost:5174',
   'https://rikud.netlify.app',
   'https://main--rikud.netlify.app', // Netlify preview URLs
-  /^https:\/\/.*\.netlify\.app$/ // Any Netlify subdomain
+  /^https:\/\/.*\.netlify\.app$/, 
+  'https://rikud-baruach-hatova.com',
 ];
 
 app.use(cors({
