@@ -29,6 +29,35 @@ const branchSchema = new mongoose.Schema({
     trim: true,
     maxlength: [500, 'Description cannot be more than 500 characters']
   },
+  scheduleFileUrl: {
+    type: String,
+    trim: true,
+    default: ''
+  },
+  scheduleFileKey: {
+    type: String,
+    trim: true,
+    default: ''
+  },
+  scheduleFileType: {
+    type: String,
+    trim: true,
+    default: ''
+  },
+  scheduleFileName: {
+    type: String,
+    trim: true,
+    default: ''
+  },
+  scheduleYear: {
+    type: String,
+    trim: true,
+    default: ''
+  },
+  scheduleUpdatedAt: {
+    type: Date,
+    default: null
+  },
   isActive: {
     type: Boolean,
     default: true
@@ -37,7 +66,6 @@ const branchSchema = new mongoose.Schema({
   timestamps: true
 });
 
-// Index for faster searches
 branchSchema.index({ name: 1 });
 
 module.exports = mongoose.model('Branch', branchSchema);
